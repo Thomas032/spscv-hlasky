@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from .models import User
-from .models import Post
+
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from .models import Note
@@ -92,6 +92,6 @@ def sign_up():
 @auths.route('/úkoly', methods=['GET', 'POST'])
 @login_required
 def work():
-    posts = Post.query.all()
     
-    return render_template('homework.html', user=current_user, profile="Work", post=posts)
+    
+    return render_template('homework.html', user=current_user, profile="Work")
