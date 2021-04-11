@@ -1,0 +1,94 @@
+{% extends "base.html" %} {% block title%}Ostatní {% endblock %} {%block content%}
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styl1.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+</head>
+<audio id="file0" preload="none">
+    <source src="http://storage.borec.cz/Ku%C5%A1niruk%20ano_ne.wav" type="audio/mpeg" >
+</audio>
+<audio id="file1" preload="none">
+    <source src="http://storage.borec.cz/Ku%C5%A1niruk%20drak.wav" type="audio/mpeg" >
+</audio>
+<audio id="file2" preload="none">
+    <source src="http://storage.borec.cz/Ku%C5%A1niruk%20hasi%C4%8Di.wav" type="audio/mpeg" >
+</audio>
+<audio id="file3" preload="none">
+    <source src="http://storage.borec.cz/Ku%C5%A1niruk%20j%C3%A1%20jsem%20to%20natypoval.wav" type="audio/mpeg" >
+</audio>
+<audio id="file4" preload="none">
+    <source src="http://storage.borec.cz/Ku%C5%A1niruk%20%C5%99e%C5%A1%C3%AD.wav" type="audio/mpeg" >
+</audio>
+<audio id="file5" preload="none">
+    <source src="http://storage.borec.cz/Klega%20zp%C4%9Bv.wav" type="audio/mpeg" >
+</audio>
+<audio id="file6" preload="none">
+    <source src="http://storage.borec.cz/Kolou%C5%A1kov%C3%A1%20Jackson.wav" type="audio/mpeg" >
+</audio>
+<audio id="file7" preload="none">
+    <source src="http://storage.borec.cz/Kolou%C5%A1kov%C3%A1%20nesmrteln%C3%A9.wav" type="audio/mpeg" >
+</audio>
+<audio id="file8" preload="none">
+    <source src="http://storage.borec.cz/Poschl%20Jan%20Hnus.wav" type="audio/mpeg" >
+</audio>
+
+<h1 align="center">Ostatní</h1>
+<h3>Míra:</h3>
+<div class="other">
+
+
+
+    <div class="box" onclick="playsound(0)">
+        <p>ANO_NE</p>
+    </div>
+    <div class="box" onclick="playsound(1)">
+        <p>Drak</p>
+    </div>
+    <div class="box" onclick="playsound(2)">
+        <p>Hasiči</p>
+    </div>
+    <div class="box" onclick="playsound(3)">
+        <p>Já jsem to<br>natipoval!</p>
+    </div>
+    <div class="box" onclick="playsound(4)">
+        <p>Řeší.</p>
+    </div>
+
+
+
+
+</div>
+
+<h3>Klega:</h3>
+
+<div class="other">
+
+    <div class="box" onclick="playsound(5)">
+        <p>Zpěv</p>
+    </div>
+
+</div>
+<h3>Koloušková</h3>
+<div class="other">
+    <div class="box" onclick="playsound(6)">
+        <p>Jackson</p>
+    </div>
+    <div class="box" onclick="playsound(7)">
+        <p>Nesmrtelné</p>
+    </div>
+</div>
+<h3>Pöschl</h3>
+<div class="other">
+    <div class="box" onclick="playsound(8)">
+        <p>Jan Hnus</p>
+    </div>
+
+
+</div>
+
+{%endblock%}

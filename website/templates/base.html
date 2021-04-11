@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <title>{% block title %} Home {%endblock%}</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-end">
+
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav " id="navbar">
+                {% if user.is_authenticated %}
+                <!---This a start of a expandable nav link-->
+
+                <li class="nav-item">
+                    {% if profile == 'Home'%}
+                    <a class=" nav-link active" id="home" href="/">Home</a> {%else%}
+                    <a class=" nav-link " id="home" href="/">Home</a> {%endif%}
+
+                </li>
+                <li class="nav-item dropdown ">
+
+                    <a class="nav-link dropdown-toggle" href="/hlášky" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Hlášky
+                    </a>
+                    <div class="dropdown-menu" style="color: #ffffff;" aria-labelledby="navbarDropdown">
+
+                        {% if profile == 'Mach'%}
+                        <a class="dropdown-item active " id="Machy" href="/macháček">Macháček</a> {%else%}
+                        <a class="dropdown-item " id="Machy" href="/macháček">Macháček</a> {%endif%}
+                        <div class="dropdown-divider"></div>
+                        {% if profile == 'Kub'%}
+                        <a class=" dropdown-item active " id="Machy" href="/kubánková">Kubánková</a>{%else%}
+                        <a class=" dropdown-item " id="Machy" href="/kubánková">Kubánková</a> {%endif%}
+                        <div class="dropdown-divider"></div>
+                        {% if profile == 'Oth'%}
+                        <a class="dropdown-item active" id="Machy" href="/ostatní">Ostatní</a>{%else%}
+                        <a class="dropdown-item" id="Oth" href="/ostatní">Ostatní</a>{%endif%}
+
+
+                    </div>
+                    <li class="nav-item">
+                        {% if profile == 'Work'%}
+                        <a class=" nav-link active" id="homeworks" href="/úkoly">Úkoly</a> {%else%}
+                        <a class=" nav-link " id="homeworks" href="/úkoly">Úkoly</a> {%endif%}
+
+                    </li>
+                    <!----This is not a part of a expqandable nav link-->
+                    <li class="nav-item">
+                        <a class=" nav-link ml-auto" id="logout" href="/logout">Log out</a>
+                    </li>
+
+                    {%else%}
+
+                    <li class="nav-item ">
+                        {% if profile == 'log'%}
+                        <a class="nav-link active " id="login " href="/login ">Login</a> {%else%}
+                        <a class="nav-link " id="login " href="/login ">Login</a> {%endif%}
+
+                    </li>
+                    <li class="nav-item ">
+                        {% if profile == 'sign'%}
+                        <a class="nav-link active" id="sign-up " href="/sign-up ">Sign up</a>{%else%}
+                        <a class="nav-link  " id="sign-up " href="/sign-up ">Sign up</a>{%endif%}
+
+                    </li>
+
+
+                    {%endif%}
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse <span class="navbar-brand mx-auto " style="width: 125px; "></span> 
+        <!--the width is for how far is my Notes text and mx auto is tu center it-->
+    </nav>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %} {% if category == 'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div class="container ">{% block content %} {% endblock %}</div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous ">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script type="text/javascript " src="{{ url_for( 'static', filename='index.js' ) }} "></script>
+
+</body>
+
+</html>

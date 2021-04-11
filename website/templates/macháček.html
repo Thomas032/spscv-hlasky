@@ -1,0 +1,133 @@
+{% extends "base.html" %} {% block title%}Macháček {% endblock %} {%block content%}
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styl1.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<h1 align="center">Macháček</h1>
+<content>
+    <audio id="file1" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20auto.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file2" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20distribuce%20fotky.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file3" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20dobr%C3%BD%20den.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file4" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20kdo%20si%20d%C4%9Bl%C3%A1%20srandu.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file5" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20kdo%20to%20byl.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file6" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20ACDC.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file7" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20l%C3%A9ta%20p%C3%A1n%C4%9B.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file8" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20m%C4%9B%20to%20nevad%C3%AD,%20j%C3%A1%20se%20jenom%20pt%C3%A1m.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file9" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20muzika%20nen%C3%AD%20moje.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file10" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20n%C4%9Bco%20tak%20%C5%A1patn%C3%A9ho%20jsem%20ne%C4%8Dekal.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file11" preload="none">
+        <source src="" type="audio/mpeg" >
+    </audio>
+    <audio id="file12" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20obdivuhodn%C3%A9%20v%C3%BDsledky%20testu.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file13" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20Pink.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file14" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20prosim.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file15" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20p%C5%99%C3%AD%C5%A1t%C4%9B%20n%C4%9Bco%20jin%C3%A9ho.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file16" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20ru%C5%A1%C3%ADm%20hodinu.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file17" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20upgrade.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file18" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20vy%20jste%20hrdinov%C3%A9.wav" type="audio/mpeg" >
+    </audio>
+    <audio id="file19" preload="none">
+        <source src="http://storage.borec.cz/Mach%C3%A1%C4%8Dek%20za%C4%8Dnu%20zhurta.wav" type="audio/mpeg" >
+    </audio>
+
+
+
+    <div class="box" onclick="playsound(6)">
+        <p>ACDC</p>
+    </div>
+    <div class="box " onclick="playsound(1)">
+        <p>Auto</p>
+    </div>
+    <div class="box " onclick="playsound(2)">
+        <p>Distribuce mé fotky</p>
+    </div>
+    <div class="box " onclick="playsound(3)">
+        <p>Takže dobrý den.</p>
+    </div>
+    <div class="box " onclick="playsound(4)">
+        <p>Kdo si dělá strandu?</p>
+    </div>
+    <div class="box " onclick="playsound(5)">
+        <p>Kdo to byl?</p>
+    </div>
+    <div class="box " onclick="playsound(7)">
+        <p>Léta páně</p>
+    </div>
+    <div class="box " onclick="playsound(8)">
+        <p>Já se jenom ptám</p>
+    </div>
+    <div class="box " onclick="playsound(9)">
+        <p>Muzika není moje</p>
+    </div>
+    <div class="box " onclick="playsound(10)">
+        <p>Něco tak špatného<br> jsem nečekal</p>
+    </div>
+    <div class="box " onclick="hello(11)">
+        <p>Něco</p>
+    </div>
+    <div class="box " onclick="playsound(12)">
+        <p>Obdivuhodné výsledky <br> testu</p>
+    </div>
+    <div class="box " onclick="playsound(13)">
+        <p>Pink Floyd</p>
+    </div>
+    <div class="box " onclick="playsound(14)">
+        <p>Prosím</p>
+    </div>
+    <div class="box " onclick="playsound(15)">
+        <p>Příště něco jiného.</p>
+    </div>
+    <div class="box " onclick="playsound(16)">
+        <p>Ruším hodinu</p>
+    </div>
+    <div class="box " onclick="playsound(17)">
+        <p>Upgrade</p>
+    </div>
+    <div class="box " onclick="playsound(18)">
+        <p>Vy jste hrdinové</p>
+    </div>
+    <div class="box " onclick="playsound(19)">
+        <p>Začnu zhurta.</p>
+    </div>
+
+</content>
+{%endblock%}

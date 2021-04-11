@@ -1,0 +1,330 @@
+{% extends "base.html" %} {% block title%}Kubánková {% endblock %} {%block content%}
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styl1.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+<audio id="file0" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1kov%C3%A1%20a%20d%C5%AFvod.wav" type="audio/mpeg" >
+</audio>
+<audio id="file1" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20ajajajaj.wav" type="audio/mpeg" >
+</audio>
+<audio id="file2" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20bl%C3%A1zinec.wav" type="audio/mpeg" >
+</audio>
+<audio id="file3" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20co%20tam%20kdo%20bl%C3%A1bol%C3%AD.wav" type="audio/mpeg" >
+</audio>
+<audio id="file4" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20co%C5%BEe.wav" type="audio/mpeg" >
+</audio>
+<audio id="file5" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20dobr%C3%BD%20den.wav" type="audio/mpeg" >
+</audio>
+<audio id="file7" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20drbny.wav" type="audio/mpeg" >
+</audio>
+<audio id="file8" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20gang%20trpasl%C3%ADk%C5%AF.wav" type="audio/mpeg" >
+</audio>
+<audio id="file9" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20hajzl%C3%ADk%20jeden.wav" type="audio/mpeg" >
+</audio>
+<audio id="file10" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20hrozn%C3%BD%20fakt%20hrozn%C3%BD.wav" type="audio/mpeg" >
+</audio>
+<audio id="file11" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20hrozn%C3%BD%20fakt%20hrozn%C3%BD.wav" type="audio/mpeg" >
+</audio>
+<audio id="file12" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20chudika.wav" type="audio/mpeg" >
+</audio>
+<audio id="file13" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20j%C3%A1%20se%20nevymlouv%C3%A1m.wav" type="audio/mpeg" >
+</audio>
+<audio id="file14" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20je%C5%A1t%C4%9B%20%C5%BEe%20ho%20m%C3%A1me.wav" type="audio/mpeg" >
+</audio>
+<audio id="file15" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20kdepak%20je%20zbytek.wav" type="audio/mpeg" >
+</audio>
+<audio id="file16" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20k%C5%99%C3%AD%C5%BEovky.wav" type="audio/mpeg" >
+</audio>
+
+<audio id="file17" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20mluv%C3%AD.wav" type="audio/mpeg" >
+</audio>
+<audio id="file18" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20mrtv%C3%BD%20brouk.wav" type="audio/mpeg" >
+</audio>
+<audio id="file19" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20mus%C3%ADm%20se%20dostat%20do%20str%C3%A1nek%20a%20jsem%20na%20sebe%20zv%C4%9Bdav%C3%A1.wav" type="audio/mpeg" >
+</audio>
+<audio id="file20" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20nechci%20hodnotit%20tv%C3%A9%20du%C5%A1evn%C3%AD%20zdrav%C3%AD.wav" type="audio/mpeg" >
+</audio>
+<audio id="file21" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20n%C4%9Bjakej%20mimo%C5%88.wav" type="audio/mpeg" >
+</audio>
+<audio id="file22" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20nejsem%20si%20jist%C3%A1%20v%20%C4%8Dem%20to%20spo%C4%8D%C3%ADv%C3%A1.wav" type="audio/mpeg" >
+</audio>
+<audio id="file23" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20nev%C3%ADte,%20%C5%BEe%20trpasl%C3%ADci%20%C5%BEijou%20v%20PC.wav" type="audio/mpeg" >
+</audio>
+<audio id="file24" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20nevyhro%C5%BEuji.wav" type="audio/mpeg" >
+</audio>
+<audio id="file25" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20no%20coment.wav" type="audio/mpeg" >
+</audio>
+<audio id="file26" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20no%20kone%C4%8Dn%C4%9B.wav" type="audio/mpeg" >
+</audio>
+<audio id="file27" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20odchod%20techniky.wav" type="audio/mpeg" >
+</audio>
+<audio id="file28" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20oni%20se%20za%C4%8Dali%20rozmno%C5%BEovat.wav" type="audio/mpeg" >
+</audio>
+<audio id="file29" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20pedef%C3%ADlie.wav" type="audio/mpeg" >
+</audio>
+<audio id="file30" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20polobezdom%C3%A1%C4%8D.wav" type="audio/mpeg" >
+</audio>
+<audio id="file31" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20po%C5%99%C3%A1d%20se%20mi%20n%C4%9Bkde%20cour%C3%A1te.wav" type="audio/mpeg" >
+</audio>
+<audio id="file32" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20po%C5%BE%C3%A1r.wav" type="audio/mpeg" >
+</audio>
+<audio id="file33" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20no%20coment.wav" type="audio/mpeg" >
+</audio>
+<audio id="file34" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20pr%C3%A1zdn%C3%A9%20m%C3%ADstnosti.wav" type="audio/mpeg" >
+</audio>
+<audio id="file35" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20prud%C3%AD.wav" type="audio/mpeg" >
+</audio>
+<audio id="file36" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20rozmno%C5%BEovali%20se%20jak%20krysy.wav" type="audio/mpeg" >
+</audio>
+<audio id="file37" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20sarkasmus.wav" type="audio/mpeg" >
+</audio>
+<audio id="file38" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20sejdem%20se%20u%20rybn%C3%ADka.wav" type="audio/mpeg" >
+</audio>
+<audio id="file39" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20to%20je%20fascinuj%C3%ADc%C3%AD.wav" type="audio/mpeg" >
+</audio>
+<audio id="file40" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20to%20m%C4%9B%20nep%C5%99ekvapuje.wav" type="audio/mpeg" >
+</audio>
+<audio id="file41" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20trpas%C3%ADci%20funguj%C3%AD%20dob%C5%99e.wav" type="audio/mpeg" >
+</audio>
+<audio id="file42" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20trpasl%C3%ADc%20mi%20vypli%20mikrofon.wav" type="audio/mpeg" >
+</audio>
+<audio id="file43" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20trpasl%C3%ADci%20b%C4%9B%C5%BE%C3%AD%20po%20s%C3%ADti.wav" type="audio/mpeg" >
+</audio>
+<audio id="file44" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20trpasl%C3%ADci%20p%C5%AFsob%C3%AD%20ve%20v%C3%A1%C5%A1%20prosp%C4%9Bch.wav" type="audio/mpeg" >
+</audio>
+<audio id="file45" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20trpasl%C3%ADci%20si%20na%20m%C4%9B%20zasedli.wav" type="audio/mpeg" >
+</audio>
+<audio id="file46" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20v%20jin%C3%A9%20t%C5%99%C3%ADd%C4%9B%20se%20mi%20to%20nest%C3%A1v%C3%A1.wav" type="audio/mpeg" >
+</audio>
+<audio id="file47" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20vy%20nev%C3%ADte,%20co%20jsou%20trpasl%C3%ADci.wav" type="audio/mpeg" >
+</audio>
+<audio id="file48" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20vyhro%C5%BEuje.wav" type="audio/mpeg" >
+</audio>
+<audio id="file49" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20vzd%C4%9Bl%C3%A1n%C3%AD%20matematick%C3%A9.wav" type="audio/mpeg" >
+</audio>
+<audio id="file50" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nkov%C3%A1%20Zeman.wav" type="audio/mpeg" >
+</audio>
+<audio id="file51" preload="none">
+    <source src="http://storage.borec.cz/Kub%C3%A1nov%C3%A1%20trojka%20norm%C3%A1lka.wav" type="audio/mpeg" >
+</audio>
+
+
+
+<h1 align="center">Kubánková</h1>
+<content>
+    <div class="box" onclick="playsound(0)">
+        <p>A důvod</p>
+    </div>
+    <div class="box " onclick="playsound(1)">
+        <p>Ajajaj</p>
+    </div>
+    <div class="box " onclick="playsound(2)">
+        <p>Blázinec</p>
+    </div>
+    <div class="box " onclick="playsound(3)">
+        <p>Co tam kdo<br>blábolí !?</p>
+    </div>
+    <div class="box " onclick="playsound(4)">
+        <p>Cože!</p>
+    </div>
+    <div class="box " onclick="playsound(5)">
+        <p>Dobrý den!</p>
+    </div>
+    <div class="box " onclick="playsound(7)">
+        <p>Drbny</p>
+    </div>
+    <div class="box " onclick="playsound(8)">
+        <p>Gang trpaslíků.</p>
+    </div>
+    <div class="box " onclick="playsound(9)">
+        <p>Hajzlík jeden.</p>
+    </div>
+    <div class="box " onclick="playsound(10)">
+        <p>Hrozný fakt hrozný</p>
+    </div>
+
+    <div class="box " onclick="playsound(12)">
+        <p>Chudinka </p>
+    </div>
+    <div class="box " onclick="playsound(13)">
+        <p>Já se nevymlouvám</p>
+    </div>
+    <div class="box " onclick="playsound(14)">
+        <p>Ještě že ho máme. </p>
+    </div>
+    <div class="box " onclick="playsound(15)">
+        <p> Kdepak je zbytek?</p>
+    </div>
+    <div class="box " onclick="playsound(16)">
+        <p>Křížovky</p>
+    </div>
+    <div class="box " onclick="playsound(17)">
+        <p>Mluví.</p>
+    </div>
+    <div class="box " onclick="playsound(18)">
+        <p>Mrtvý brouk.</p>
+    </div>
+    <div class="box " onclick="playsound(19)">
+        <p>Jsem na sebe<br>zvědavá.</p>
+    </div>
+    <div class="box " onclick="playsound(20)">
+        <p>Duševní zdraví.</p>
+    </div>
+    <div class="box " onclick="playsound(21)">
+        <p>Nějakej mimoň.</p>
+    </div>
+    <div class="box " onclick="playsound(22)">
+        <p>Nejsem si jistá <br> v čem to spočívá.</p>
+    </div>
+    <div class="box " onclick="playsound(23)">
+        <p>Nevíte že v PC<br> žijí trpajzlíci.</p>
+    </div>
+    <div class="box " onclick="playsound(24)">
+        <p>Nevyhrožuji.</p>
+    </div>
+    <div class="box " onclick="playsound(25)">
+        <p>No coment.</p>
+    </div>
+    <div class="box " onclick="playsound(26)">
+        <p>No konečně.</p>
+    </div>
+    <div class="box " onclick="playsound(27)">
+        <p>Odchod techniky.</p>
+    </div>
+    <div class="box " onclick="playsound(28)">
+        <p>Oni se začali<br>rozmnožovat.</p>
+    </div>
+    <div class="box " onclick="playsound(29)">
+        <p>Pedofilie...</p>
+    </div>
+    <div class="box " onclick="playsound(30)">
+        <p>Polobezdomáč.</p>
+    </div>
+    <div class="box " onclick="playsound(31)">
+        <p>Pořád se mi <br>někde couráte.</p>
+    </div>
+    <div class="box " onclick="playsound(32)">
+        <p>Požár</p>
+    </div>
+
+    <div class="box " onclick="playsound(34)">
+        <p>Prázdné místnosti.</p>
+    </div>
+    <div class="box " onclick="playsound(35)">
+        <p>Prudí.</p>
+    </div>
+    <div class="box " onclick="playsound(36)">
+        <p>Rozmnožovali se jak<br>krysy.</p>
+    </div>
+    <div class="box " onclick="playsound(37)">
+        <p>Sarkasmus</p>
+    </div>
+    <div class="box " onclick="playsound(38)">
+        <p>Sejdeme se<br>u rybníka.</p>
+    </div>
+    <div class="box " onclick="playsound(39)">
+        <p>Fascinující.</p>
+    </div>
+    <div class="box " onclick="playsound(40)">
+        <p>To mě nepřekvapuje.</p>
+    </div>
+    <div class="box " onclick="playsound(41)">
+        <p>Trpaslíci fungují<br>dobře.</p>
+    </div>
+    <div class="box " onclick="playsound(42)">
+        <p>Trpaslíci mi vypli<br>mikrofon.</p>
+    </div>
+    <div class="box " onclick="playsound(43)">
+        <p>Trpaslíci běží<br>po síti.</p>
+    </div>
+    <div class="box " onclick="playsound(44)">
+        <p>Působí ve váš<br>prospěch</p>
+    </div>
+    <div class="box " onclick="playsound(45)">
+        <p>Trpaslíci si na mě<br>zasedli.</p>
+    </div>
+    <div class="box " onclick="playsound(46)">
+        <p>V jiné třídě se<br>mi to nestává.</p>
+    </div>
+
+    <div class="box " onclick="playsound(47)">
+        <p>Vy nevíte co<br>jsou trpaslíci.</p>
+    </div>
+    <div class="box " onclick="playsound(48)">
+        <p>Vyhrožuje.</p>
+    </div>
+    <div class="box " onclick="playsound(49)">
+        <p>Vzdělání<br>matematické.</p>
+    </div>
+    <div class="box " onclick="playsound(50)">
+        <p>Zeman...</p>
+    </div>
+    <div class="box " onclick="playsound(51)">
+        <p>Trojka Normálka.</p>
+    </div>
+
+
+
+
+
+
+
+</content>
+{%endblock%}
