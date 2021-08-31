@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template, request , flash, redirect, url_for, send_file
 from .models import User
 import datetime
-
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
