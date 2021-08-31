@@ -7,12 +7,18 @@ function deleteNote(noteId) {
     });
 }
 
-function hello(num) {
-    leguan = num * 2
-    console.log("HEllo world! " + "2 * " + num + " = " + leguan);
-}
-
 function playsound(number) {
     var sound = document.getElementById('file' + number);
     sound.play();
 }
+var d = new Date();
+document.getElementById('date').innerHTML = "Today is: " + d.getDate() + "." + d.getMonth() + ".";
+document.getElementById('col').onclick = function change_col() {
+    const color = "#FFFFFF"
+    fetch("/change-color", {
+        method: "POST",
+        body: JSON.stringify({ color }),
+    }).then((_res) => {
+        window.location.href = "/";
+    });
+};

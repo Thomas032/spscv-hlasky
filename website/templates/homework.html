@@ -1,8 +1,35 @@
-{% extends "base.html" %} {% block title%}Úkoly {% endblock %} {%block content%}
+{% extends "base.html" %} {% block title %}Úkoly{% endblock %} {% block content %}
 
-<p>Hello word!</p>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styl1.css')}}">
+</head>
+<h1 align="center">Úkoly</h1>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item align-inline">
+        <div class="itms">
+            <p>Due: {{ note.date }}</p>
+            {% for i in lis%}
+            <p>Remaining: {{li}}</p>
+            {%endfor%}
+            <p>Task: {{note.data}}</p>
+        </div>
 
-
-
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </li>
+    {% endfor %}
+</ul>
+<br>
+<hr class="my-hr">
+<form method="POST" class="form">
+    <input autocomplete="off" , type="text" name="note" id="note" class="form-control" placeholder="Váš úkol nebo poznámka"></input>
+    <input type="date" name="datum" id="datum" class="form-control"></input>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Přidat úkol</button>
+    </div>
+</form>
 
 {%endblock%}

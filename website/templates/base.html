@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="icon" href="{{ url_for( 'static', filename='standa.png' ) }}" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styl1.css')}}">
 
     <title>{% block title %} Home {%endblock%}</title>
 </head>
@@ -20,6 +22,7 @@
             <ul class="navbar-nav " id="navbar">
                 {% if user.is_authenticated %}
                 <!---This a start of a expandable nav link-->
+                <script type="text/javascript " src="{{ url_for( 'static', filename='index.js' ) }} "></script>
 
                 <li class="nav-item">
                     {% if profile == 'Home'%}
@@ -54,6 +57,19 @@
                         <a class=" nav-link " id="homeworks" href="/úkoly">Úkoly</a> {%endif%}
 
                     </li>
+                    <li class="nav-item">
+                        {% if profile == 'Book'%}
+                        <a class=" nav-link active" id="books" href="/učebnice">Učebnice</a> {%else%}
+                        <a class=" nav-link " id="books" href="/učebnice">Učebnice</a> {%endif%}
+
+                    </li>
+
+                    <li class="nav-item"> {% if profile == 'Pohl'%}
+                        <a class=" nav-link active" id="PohlDrive" href="/PohlDrive">PohlDrive</a> {%else%}
+                        <a class=" nav-link " id="PohlDrive" href="/PohlDrive">PohlDrive</a> {%endif%}
+
+                    </li>
+
                     <!----This is not a part of a expqandable nav link-->
                     <li class="nav-item">
                         <a class=" nav-link ml-auto" id="logout" href="/logout">Log out</a>
@@ -104,12 +120,11 @@
 
 
 
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous ">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
-    <script type="text/javascript " src="{{ url_for( 'static', filename='index.js' ) }} "></script>
+
 
 </body>
 

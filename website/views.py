@@ -1,19 +1,15 @@
 from flask import Blueprint, render_template,request, jsonify
 from flask_login import  login_required, current_user
-from .models import Note
-from . import db
-from flask import flash
-import json
-import random
-from .auth import login
+
 
 views  = Blueprint('views', __name__)
 
+
+
 @views.route('/', methods=['GET', 'POST']) 
 def home():
-    return render_template("home.html", user=current_user, profile="Home" )  
+    return render_template("home.html", user=current_user, profile="Home", school=False)  
 
-secret = random.randint(1,4582545)
 @views.route('/admin')
 @login_required
 def admin():
