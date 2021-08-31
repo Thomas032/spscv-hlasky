@@ -85,8 +85,7 @@ def sign_up():
         
         if user:
             flash('Email již existuje', category='error') 
-            #color code is 60, 222, 16
-            # color code to hex is #3cde10
+            
 
         elif len(email) < 4:
             flash(f'Délka vašeho emailu je {len(email)} charaktery dlouhé, ale musí být větší než 4', category='error')
