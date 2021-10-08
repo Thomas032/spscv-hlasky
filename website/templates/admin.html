@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title%}ADMIN{% endblock %} {%block content %}
+<h3 align="center">Welcome {{oslovení}}!</h3>
+<div align="center">
+
+    <img src="https://cdn11.bigcommerce.com/s-61d9ne0ffi/products/19598/images/38971/75631-welcome-beaver-outside__39899.1549395606.500.750.jpg?c=2">
+</div>
+<br>
+<hr>
+<br>
+<h5 align="center">Schedule Control Panel</h5>
+<form method="post" class="form" enctype="multipart/form-data" action="/admin">
+    <div class="form-group">
+        <label for="jmeno_ucitele">Name of the teacher: </label>
+        <input type="text" class="form-control" name="t_name" id="jmeno_ucitele">
+    </div>
+    <div class="form-group">
+        <label for="rozvrh_ucitele">Schedule pic: </label>
+        <input type="file" class="form-control-file" id="rozvrh_ucitele" name="file">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+<hr>
+<h6>Existing schedules {{num}} · Missing {{10-num}} :</h6>
+<ul class="list-group list-group-flush">
+    {% for rozvrh in rozvrhy %}
+    <li class="list-group-item align-inline">
+        <p>Teacher name: {{rozvrh.teacher_name}}</p>
+        <p>File name: {{rozvrh.file_name}}</p>
+
+        <button type="button" class="close" onClick="deleteSched({{ rozvrh.id }})">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </li>
+    {%endfor%}
+
+</ul>
+
+{% endblock %}
