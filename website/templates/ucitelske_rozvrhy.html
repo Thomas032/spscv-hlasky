@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title%}Rozvrhy učitelů{%endblock%} {%block content%}
+<h3 align="center">Rozvrhy učitelů</h3>
+{%for rozvrh in rozvrhy%} {%if rozvrh.file_name != ""%}
+<div class="schedule_box">
+
+    <h4>{{rozvrh.teacher_name}}</h4>
+    <img src="static/rozvrhy/{{rozvrh.file_name}}">
+
+</div>
+<br> {%else%}
+<p align="center">It seems like there is no content here yet :(</p>
+{%endif%} {%endfor%}
+<br> {%endblock%}

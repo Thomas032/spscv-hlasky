@@ -7,6 +7,15 @@ function deleteNote(noteId) {
     });
 }
 
+function deleteSched(schedId) {
+    fetch("/delete-sched", {
+        method: "POST",
+        body: JSON.stringify({ schedId: schedId }),
+    }).then((_res) => {
+        window.location.href = "/admin";
+    });
+}
+
 function playsound(number) {
     var sound = document.getElementById('file' + number);
     sound.play();

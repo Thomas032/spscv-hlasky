@@ -9,7 +9,7 @@
     <link rel="icon" href="{{ url_for( 'static', filename='standa.png' ) }}" type="image/png">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styl1.css')}}">
 
-    <title>{% block title %} Home {%endblock%}</title>
+    <title>Standa · {% block title %} Home {%endblock%}</title>
 </head>
 
 <body>
@@ -64,10 +64,21 @@
 
                     </li>
 
-                    <li class="nav-item"> {% if profile == 'Pohl'%}
-                        <a class=" nav-link active" id="PohlDrive" href="/PohlDrive">PohlDrive</a> {%else%}
-                        <a class=" nav-link " id="PohlDrive" href="/PohlDrive">PohlDrive</a> {%endif%}
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="/hlášky" id="navbarDropdownrozvrh" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rozvrhy
+                          </a>
+                        <div class="dropdown-menu" style="color: #ffffff;" aria-labelledby="navbarDropdownrozvrh">
 
+                            {% if profile == 'r_nas'%}
+                            <a class="dropdown-item active " id="R_nas" href="/náš_rozvrh">Náš rozvrh</a> {%else%}
+                            <a class="dropdown-item " id="R_nas" href="/náš_rozvrh">Náš rozvrh</a> {%endif%}
+                            <div class="dropdown-divider"></div>
+                            {% if profile == 'r_ost'%}
+                            <a class=" dropdown-item active " id="R_uc" href="/učitelské_rozvrhy">Rozvrh učitelů</a>{%else%}
+                            <a class=" dropdown-item " id="R_uc" href="/učitelské_rozvrhy">Rozvrh Učitelů</a> {%endif%}
+
+                        </div>
                     </li>
 
                     <!----This is not a part of a expqandable nav link-->
