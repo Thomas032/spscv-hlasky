@@ -96,8 +96,7 @@ def sign_up():
         
         if user:
             flash('Email již existuje', category='error') 
-            #color code is 60, 222, 16
-            # color code to hex is #3cde10
+            
 
         elif len(email) < 4:
             flash(f'Délka vašeho emailu je {len(email)} charaktery dlouhé, ale musí být větší než 4', category='error')
@@ -199,6 +198,7 @@ def change_color():
 @login_required
 def school():
     return render_template('home.html', user = current_user, profile="Home", school=True)
+<<<<<<< HEAD
 
 @auths.route("/admin", methods=['POST', 'GET'])
 @login_required
@@ -285,3 +285,5 @@ def plebify(email):
     else:
         return render_template("error.html", user=current_user)
     
+=======
+>>>>>>> 13bdd04e7990c465c3ae359e84b07ca33782d6bf
